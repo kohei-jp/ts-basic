@@ -9,5 +9,9 @@ export default class World {
     if (elem){
       elem.innerText = this.message
     }
+
+
+
+    
   }
 }
