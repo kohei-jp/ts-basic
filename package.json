@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --mode=production",
     "start": "webpack-cli serve --mode development",
+    "lint": "eslint --fix 'src/**/*.{js,ts}'",
     "lint-fix": "eslint --fix './src/**/*.{js,ts}' && prettier --write './src/**/*.{js,ts}'"
   },
   "author": "",
@@ -26,12 +27,12 @@
   },
   "hasky":{
     "hook": {
-      "pre-commit": "lint-staged" // commitする直前にlint-s..を呼び出す
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "src/**/*.{js,ts}": [ // どのファイルに対して行うか
-      "npm run lint-fix" // このコマンドを呼び出す
+    "src/**/*.{js,ts}": [
+      "npm run lint-fix"
     ]
   } 
 }
