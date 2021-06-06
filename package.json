@@ -6,7 +6,6 @@
   "scripts": {
     "build": "webpack --mode=production",
     "start": "webpack-cli serve --mode development",
-    "lint": "eslint --fix 'src/**/*.{js,ts}'",
     "lint-fix": "eslint --fix './src/**/*.{js,ts}' && prettier --write './src/**/*.{js,ts}'"
   },
   "author": "",
@@ -25,7 +24,7 @@
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
   },
-  "hasky":{
+  "hasky": {
     "hook": {
       "pre-commit": "lint-staged"
     }
@@ -34,5 +33,6 @@
     "src/**/*.{js,ts}": [
       "npm run lint-fix"
     ]
-  } 
+  },
+  "dependencies": {}
 }
